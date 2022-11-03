@@ -1,0 +1,8 @@
+body {
+  background-color: aliceblue;
+}
+
+.card-img-top{
+  height: 10rem;
+  object-fit: cover;  /* Esta propiedad sirve para ajustar una imagen al tamaño indicado sin deformarse*/
+}
