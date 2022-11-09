@@ -6,3 +6,7 @@ body {
   height: 10rem;
   object-fit: cover;  /* Esta propiedad sirve para ajustar una imagen al tamaño indicado sin deformarse*/
 }
+
+.active{
+  border-bottom: 2px solid palevioletred /*Recuerda que esto no lleva , para separar*/
+}
