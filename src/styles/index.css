@@ -2,6 +2,15 @@ body {
   background-color: aliceblue;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover{
+  color: darkcyan;
+}
+
 .card-img-top{
   height: 10rem;
   object-fit: cover;  /* Esta propiedad sirve para ajustar una imagen al tamaño indicado sin deformarse*/

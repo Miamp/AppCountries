@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import Card from '../component/common/Card'
 import Loading from '../component/common/Loading'
 /* Método */
@@ -13,15 +14,20 @@ export const Countries = () => {
   return (/* loading
   ? (<p> ...Loading </p>)
   : ()  Esta sería una posible opción con el operador ternario */
-    <section className='container py-5'>
-      <div className='row gy-4'>
-        {countries.map((country, index) => (
-          <div key={index} className='col-12 col-md-6 col-lg-3'>
-            <Card name={country.name} flags={country.flags} />
-          </div>
-        ))}
-      </div>
-      {error !== '' ? <p>{error}</p> : null}
-    </section>
+    <>
+      <Helmet prioritizeSeoTags>
+        <title> Countries API</title>
+      </Helmet>
+      <section className='container py-5'>
+        <div className='row gy-4'>
+          {countries.map((country, index) => (
+            <div key={index} className='col-12 col-md-6 col-lg-3'>
+              <Card {...country} /> {/* name={country.name} flags={country.flags} */}
+            </div>
+          ))}
+        </div>
+        {error !== '' ? <p>{error}</p> : null}
+      </section>
+    </>
   )
 }

@@ -8,6 +8,7 @@ import './styles/index.css'
 import { ToastContainer } from 'react-toastify'
 import { BrowserRouter } from 'react-router-dom'
 import Paths from './Paths'
+import { HelmetProvider } from 'react-helmet-async'
 // import RoutingDocu from './component/docs/RoutingDocu'
 
 /* createRoot(document.getElementById('root')).render(
@@ -19,11 +20,13 @@ import Paths from './Paths'
 createRoot(document.getElementById('root')).render(
   <>
     {/* <Countries /> */}
-    <BrowserRouter> {/* Primero se cierra la aplicación nuestra app en Browser Router  */}
-      {/* <RoutingDocu /> */}
-      <Paths />
-      <ToastContainer />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter> {/* Primero se cierra la aplicación nuestra app en Browser Router  */}
+        {/* <RoutingDocu /> */}
+        <Paths />
+        <ToastContainer />
+      </BrowserRouter>
+    </HelmetProvider>
   </>
 )
 
